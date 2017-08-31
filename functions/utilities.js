@@ -64,34 +64,6 @@ module.exports = (client) => {
     return permlvl;
   };
 
-  client.log = (type, message, title) => {
-    if (!title) title = 'Log';
-    console.log(`[${type}] [${title}]${message}`);
-  };
-
-
-  /*
-  SINGLE-LINE AWAITMESSAGE
-
-  A simple way to grab a single reply, from the user that initiated
-  the command. Useful to get 'precisions' on certain things...
-
-  USAGE
-
-  const response = await client.awaitReply(message, 'Favourite Color?');
-  message.reply(`Oh, I really love ${response} too!`);
-
-  */
-  client.awaitReply = async (message, question, limit = 60000) => {
-    const filter = m=>m.author.id = message.author.id;
-    await message.channel.send(question);
-    try {
-      const collected = await message.channel.awaitMessages(filter, { max: 1, time: limit, errors: ['time'] });
-      return collected.first().content;
-    } catch (e) {
-      return false;
-    }
-  };
 
   // client.answer = (message, contents, options = {}) => {
   //   options.delay =  (options.delay || 2000);

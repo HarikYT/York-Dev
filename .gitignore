@@ -6,14 +6,14 @@
 *.log
 
 # Specific Files
-settings.json
-config.json
-tagsbot.sqlite
-assets/selfies/selfie.jpg
-assets/selfies/selfie_meme.jpg
-assets/selfies/selfie_triggered.jpg
-commands/meme_old.js
-commands/meme.js
-commands/selfie.js
-commands/triggered.js
-package-lock.json
+/settings.json
+/config.json
+/tagsbot.sqlite
+/assets/selfies/selfie.jpg
+/assets/selfies/selfie_meme.jpg
+/assets/selfies/selfie_triggered.jpg
+/commands/meme_old.js
+/commands/meme.js
+/commands/selfie.js
+/commands/triggered.js
+/package-lock.json
